@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="movie.bw.com.movie">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:name=".app.MyApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/wsq"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:screenOrientation="portrait"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:icon"
+        tools:targetApi="n">
         <activity
-            android:name=".MainActivity"
+            android:name=".acitivty.StartUpActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +31,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".acitivty.MainActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".acitivty.GuideActivity" />
+        <activity android:name=".acitivty.LoginActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".acitivty.RegisterActivity" />
+        <activity android:name=".acitivty.DetailsActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".acitivty.PagingActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".acitivty.PurchaseActivity"/>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
     </application>
 
 </manifest>

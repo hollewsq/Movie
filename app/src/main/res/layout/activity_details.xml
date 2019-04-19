@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fdetails"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0.5">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/dy"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/dea"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:src="@mipmap/com_icon_movie_default"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/dy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="铁血战士"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_22"
+        android:layout_marginLeft="@dimen/dp_6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dea"/>
+
+    <CheckBox
+        android:id="@+id/collection"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:button="@null"
+        android:background="@drawable/collection"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="铁血战士"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/white"
+        android:ellipsize="marquee"
+        android:layout_marginTop="@dimen/dp_70"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/picture"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/picture"
+        android:layout_width="@dimen/dp_259"
+        android:layout_height="@dimen/dp_360"
+        android:layout_marginTop="@dimen/dp_30"
+        app:placeholderImage="@mipmap/dy"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linear"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+        app:layout_constraintTop_toBottomOf="@id/picture">
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:text="详情"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/movie_bg" />
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:text="预告"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/movie_bg" />
+
+        <TextView
+            android:id="@+id/stills"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:text="剧照"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/movie_bg" />
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:text="影评"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/movie_bg" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:src="@mipmap/back"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_24"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/purchase"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:text="购票"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@drawable/movie_purchase"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

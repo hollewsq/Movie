@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_186"
+                android:background="@mipmap/film"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@mipmap/com_icon_loc_white_default"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dp_30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/location"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:layout_marginLeft="@dimen/dp_260"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/address">
+
+                <include
+                    android:id="@+id/inc"
+                    layout="@layout/search" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <recycler.coverflow.RecyclerCoverFlow
+                android:id="@+id/wood"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginTop="@dimen/dp_85"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </recycler.coverflow.RecyclerCoverFlow>
+
+            <SeekBar
+                android:alpha="0.5"
+                android:background="#ccc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                android:id="@+id/proBar"
+                android:thumb="@drawable/seek_pro"
+                android:focusable="false"
+                android:progressDrawable="@drawable/shadow"
+                app:layout_constraintTop_toBottomOf="@id/wood"
+                app:layout_constraintBottom_toTopOf="@id/con"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/wood">
+
+                <include
+                    layout="@layout/film"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

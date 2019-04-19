@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/bitmap">
+
+    <ImageView
+        android:id="@+id/imgName"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:src="@mipmap/register_icon_name_default"
+        android:layout_marginTop="@dimen/dp_130"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/name"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="昵称"
+        android:textSize="@dimen/sp_16"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_140"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgSex"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:src="@mipmap/register_icon_sex_default"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/sex"
+        app:layout_constraintLeft_toLeftOf="@id/sex"
+        app:layout_constraintBottom_toBottomOf="@id/name"/>
+
+    <EditText
+        android:id="@+id/sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="性别"
+        android:textSize="@dimen/sp_16"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBirthday"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:src="@mipmap/register_icon_date_default"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/birthday"
+        app:layout_constraintLeft_toLeftOf="@id/birthday"
+        app:layout_constraintBottom_toBottomOf="@id/sex"/>
+
+    <EditText
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="出生日期"
+        android:textSize="@dimen/sp_16"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@id/sex"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:src="@mipmap/register_icon_phone_default"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintLeft_toLeftOf="@id/phone"
+        app:layout_constraintBottom_toBottomOf="@id/birthday"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="手机号"
+        android:textSize="@dimen/sp_16"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@id/birthday"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPwd"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:src="@mipmap/register_icon_mail_default"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/pwd"
+        app:layout_constraintLeft_toLeftOf="@id/pwd"
+        app:layout_constraintBottom_toBottomOf="@id/phone"/>
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="邮箱"
+        android:textSize="@dimen/sp_16"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgMailbox"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:src="@mipmap/register_icon_lock_default"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/pwd"
+        app:layout_constraintLeft_toLeftOf="@id/pwd"
+        app:layout_constraintBottom_toBottomOf="@id/mailbox"/>
+
+    <EditText
+        android:id="@+id/mailbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:textSize="@dimen/sp_16"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@id/pwd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="@dimen/dp_40"
+        android:text="注册"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/white"
+        android:background="@drawable/login"
+        android:layout_marginTop="@dimen/dp_78"
+        app:layout_constraintTop_toBottomOf="@id/mailbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

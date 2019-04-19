@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/collect"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_120"
+        android:background="@drawable/id_details"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_155"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="类型:动作"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导演:沙恩 布莱克"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_155"
+            app:layout_constraintTop_toBottomOf="@id/type"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/dp_155"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="时长:106分钟"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/director" />
+
+        <TextView
+            android:id="@+id/land"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产地:美国"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_155"
+            app:layout_constraintTop_toBottomOf="@id/duration"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/down"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_24"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/com_icon_down_default"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剧情简介"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_149"
+            android:layout_marginLeft="@dimen/dp_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/xian1"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:background="@drawable/moviefragment_shu"
+            app:layout_constraintTop_toBottomOf="@id/introduce"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="来临来了绿绿绿绿绿绿绿绿凄凄切切群斤斤计较军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军军群精品婆婆婆婆婆泼婆婆婆婆婆婆泼婆婆铺"
+            android:textSize="@dimen/sp_12"
+            android:lines="3"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            app:layout_constraintTop_toBottomOf="@id/xian1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/performance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="演员人员"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_24"
+            app:layout_constraintTop_toBottomOf="@id/plot"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/xian2"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_3"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:background="@drawable/moviefragment_shu"
+            app:layout_constraintTop_toBottomOf="@id/performance"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+        android:id="@+id/performer"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_32"
+        android:text="演员名字"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:background="@drawable/movie_performer"
+        app:layout_constraintTop_toBottomOf="@id/xian2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_32"
+            android:text="饰演角色"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_24"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:background="@drawable/roles"
+            app:layout_constraintTop_toBottomOf="@id/xian2"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            app:layout_constraintTop_toBottomOf="@id/role">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上滑查看更多"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            app:layout_constraintTop_toBottomOf="@id/rv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dy"
+        android:layout_width="@dimen/dp_111"
+        android:layout_height="@dimen/dp_149"
+        app:placeholderImage="@mipmap/ic_launcher"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_marginLeft="@dimen/dp_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

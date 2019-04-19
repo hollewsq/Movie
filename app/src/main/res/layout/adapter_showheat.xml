@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_185"
+            app:roundedCornerRadius="@dimen/dp_8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/muma_item_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@drawable/moviefragment_shu"
+            app:layout_constraintLeft_toLeftOf="@id/img"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="王盛强"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            app:layout_constraintLeft_toRightOf="@id/v1"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
